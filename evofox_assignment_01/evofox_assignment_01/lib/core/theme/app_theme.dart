@@ -1,6 +1,5 @@
 import 'package:evofox_assignment_01/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class AppTheme {
   const AppTheme._();
@@ -38,37 +37,6 @@ class AppTheme {
           fontSize: 32,
           fontWeight: .bold,
           height: 1.15,
-        ),
-
-        headlineSmall: const TextStyle(
-          color: AppColors.foregroundRed,
-          fontSize: 13,
-          height: 1.15,
-        ),
-
-        labelMedium: const TextStyle(
-          color: AppColors.textGray,
-          fontSize: 13,
-          height: 1.15,
-        ),
-      ),
-
-      elevatedButtonTheme: ElevatedButtonThemeData(
-        style: ElevatedButton.styleFrom(
-          backgroundColor: AppColors.foregroundRed,
-          foregroundColor: AppColors.textWhite,
-          overlayColor: AppColors.backgroundBlack,
-
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(14),
-          ),
-
-          textStyle: GoogleFonts.orbitron(
-            fontSize: 15,
-            fontWeight: FontWeight.w900,
-          ),
-
-          minimumSize: const Size(double.infinity, 54),
         ),
       ),
     );
