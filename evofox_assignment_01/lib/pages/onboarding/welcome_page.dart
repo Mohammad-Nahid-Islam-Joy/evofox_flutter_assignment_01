@@ -1,5 +1,8 @@
 import 'package:evofox_assignment_01/core/theme/app_colors.dart';
+import 'package:evofox_assignment_01/pages/auth/login_page.dart';
+import 'package:evofox_assignment_01/pages/auth/registration_page.dart';
 import 'package:evofox_assignment_01/pages/onboarding/onboarding_page_one.dart';
+import 'package:evofox_assignment_01/widgets/custom_app_bar.dart';
 import 'package:evofox_assignment_01/widgets/elevated_app_button.dart';
 import 'package:evofox_assignment_01/widgets/onborading_page_indicator.dart';
 import 'package:evofox_assignment_01/widgets/text_app_button.dart';
@@ -19,6 +22,24 @@ class _WelcomePageState extends State<WelcomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: CustomAppBar(
+        rightMostAction: TextAppButton(
+          title: "",
+          onPressed: () {
+            Navigator.pushNamed(context, LoginPage.name);
+          },
+          textSpans: [
+            TextSpan(
+              text: 'Skip',
+              style: TextStyle(
+                color: AppColors.foregroundRed,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ],
+        ),
+      ),
+
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(28),
@@ -66,7 +87,9 @@ class _WelcomePageState extends State<WelcomePage> {
 
                   TextAppButton(
                     title: '',
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, RegistrationPage.name);
+                    },
                     textSpans: [
                       const TextSpan(text: "Don't have an account? "),
                       TextSpan(

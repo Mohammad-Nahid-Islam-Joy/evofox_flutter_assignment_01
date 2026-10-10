@@ -1,4 +1,6 @@
 import 'package:evofox_assignment_01/core/theme/app_colors.dart';
+import 'package:evofox_assignment_01/pages/auth/login_page.dart';
+import 'package:evofox_assignment_01/pages/auth/registration_page.dart';
 import 'package:evofox_assignment_01/pages/onboarding/onboarding_page_two.dart';
 import 'package:evofox_assignment_01/widgets/custom_app_bar.dart';
 import 'package:evofox_assignment_01/widgets/elevated_app_button.dart';
@@ -18,7 +20,9 @@ class OnboardingPageOne extends StatelessWidget {
       appBar: CustomAppBar(
         rightMostAction: TextAppButton(
           title: "",
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, LoginPage.name);
+          },
           textSpans: [
             TextSpan(
               text: 'Skip',
@@ -88,7 +92,9 @@ class OnboardingPageOne extends StatelessWidget {
 
                   TextAppButton(
                     title: '',
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, RegistrationPage.name);
+                    },
                     textSpans: [
                       const TextSpan(text: "Don't have an account? "),
                       TextSpan(
