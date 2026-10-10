@@ -1,4 +1,5 @@
 import 'package:evofox_assignment_01/core/theme/app_colors.dart';
+import 'package:evofox_assignment_01/pages/onboarding/onboarding_page_three.dart';
 import 'package:evofox_assignment_01/widgets/custom_app_bar.dart';
 import 'package:evofox_assignment_01/widgets/elevated_app_button.dart';
 import 'package:evofox_assignment_01/widgets/onborading_page_indicator.dart';
@@ -30,26 +31,81 @@ class OnboardingPageTwo extends StatelessWidget {
         ),
       ),
 
-      body: Center(),
-
-      /*
-      body: Padding(
-        padding: const EdgeInsets.all(28),
-        child: Center(
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(28),
           child: Column(
+            mainAxisAlignment: .spaceBetween,
             children: [
-              Image.asset('assets/Images/Onboarding1.png'),
-              Text(
-                "DISCOVER GAMES",
-                style: GoogleFonts.orbit(
-                  textStyle: Theme.of(context).textTheme.headlineSmall,
+              Image.asset('assets/Images/Onboarding2.png'),
+
+              Align(
+                alignment: .centerLeft,
+                child: Column(
+                  crossAxisAlignment: .start,
+                  children: [
+                    Text(
+                      "BUILD YOUR LIBRARY",
+                      style: GoogleFonts.orbit(
+                        textStyle: Theme.of(context).textTheme.headlineSmall,
+                      ),
+                    ),
+
+                    SizedBox(height: 20),
+
+                    Text(
+                      "Your games.\nOne place",
+                      style: GoogleFonts.orbitron(
+                        textStyle: Theme.of(context).textTheme.headlineLarge,
+                      ),
+                    ),
+
+                    SizedBox(height: 20),
+
+                    Text(
+                      "Keep your collection organized,\ndownload titles ahead of time, and\njump back in from anywhere.",
+                      style: GoogleFonts.orbit(
+                        textStyle: Theme.of(context).textTheme.labelMedium,
+                      ),
+                    ),
+                  ],
                 ),
+              ),
+
+              Column(
+                children: [
+                  OnboradingPageIndicator(activeIndex: 1),
+
+                  SizedBox(height: 24),
+
+                  ElevatedAppButton(
+                    title: "Continue",
+                    onPressed: () {
+                      Navigator.pushNamed(context, OnboardingPageThree.name);
+                    },
+                    icon: Icons.arrow_forward,
+                  ),
+
+                  TextAppButton(
+                    title: '',
+                    onPressed: () {},
+                    textSpans: [
+                      const TextSpan(text: "Don't have an account? "),
+                      TextSpan(
+                        text: 'Sign Up',
+                        style: TextStyle(
+                          color: AppColors.foregroundRed,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
               ),
             ],
           ),
         ),
       ),
-      */
     );
   }
 }
