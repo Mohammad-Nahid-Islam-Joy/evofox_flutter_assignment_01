@@ -30,7 +30,7 @@ class _WelcomePageState extends State<WelcomePage> {
               Column(
                 children: [
                   Image.asset(
-                    'assets/Images/Evo Fox mark.png',
+                    'assets/Images/Evo Fox logo.png',
                     width: 88,
                     height: 88,
                   ),

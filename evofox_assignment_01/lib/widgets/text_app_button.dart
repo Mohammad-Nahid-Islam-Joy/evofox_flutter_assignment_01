@@ -17,7 +17,7 @@ class TextAppButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textStyle = GoogleFonts.orbit(
-      textStyle: Theme.of(context).textTheme.labelMedium,
+      textStyle: Theme.of(context).textTheme.labelSmall,
     );
 
     return TextButton(

@@ -28,7 +28,7 @@ class AppTheme {
       useMaterial3: true,
       brightness: Brightness.dark,
       colorScheme: colorScheme,
-      scaffoldBackgroundColor: AppColors.backgroundBlack,
+      scaffoldBackgroundColor: Colors.black,
     );
 
     return base.copyWith(
@@ -44,12 +44,19 @@ class AppTheme {
           color: AppColors.foregroundRed,
           fontSize: 13,
           height: 1.15,
+          letterSpacing: 0.5,
+        ),
+
+        labelSmall: const TextStyle(
+          color: AppColors.textGray,
+          fontSize: 13,
+          height: 1.15,
         ),
 
         labelMedium: const TextStyle(
           color: AppColors.textGray,
-          fontSize: 13,
-          height: 1.15,
+          fontSize: 15,
+          height: 1.70,
         ),
       ),
 
@@ -70,6 +77,14 @@ class AppTheme {
 
           minimumSize: const Size(double.infinity, 54),
         ),
+      ),
+
+      appBarTheme: const AppBarTheme(
+        backgroundColor: Colors.black,
+        foregroundColor: Colors.red,
+        elevation: 0,
+        scrolledUnderElevation: 0,
+        surfaceTintColor: Colors.transparent,
       ),
     );
   }

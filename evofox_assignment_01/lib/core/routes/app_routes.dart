@@ -1,4 +1,5 @@
 import 'package:evofox_assignment_01/pages/onboarding/onboarding_page_one.dart';
+import 'package:evofox_assignment_01/pages/onboarding/onboarding_page_two.dart';
 import 'package:evofox_assignment_01/pages/onboarding/welcome_page.dart';
 import 'package:evofox_assignment_01/pages/splash/splash_page.dart';
 import 'package:flutter/material.dart';
@@ -29,6 +30,12 @@ class AppRoutes {
         return MaterialPageRoute(
           settings: settings,
           builder: (_) => const OnboardingPageOne(),
+        );
+
+      case OnboardingPageTwo.name:
+        return MaterialPageRoute(
+          settings: settings,
+          builder: (_) => const OnboardingPageTwo(),
         );
 
       default:
