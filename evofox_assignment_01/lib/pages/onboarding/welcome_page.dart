@@ -1,13 +1,13 @@
-import 'package:evofox_assignment_01/core/theme/app_colors.dart';
-import 'package:evofox_assignment_01/pages/auth/login_page.dart';
-import 'package:evofox_assignment_01/pages/auth/registration_page.dart';
-import 'package:evofox_assignment_01/pages/onboarding/onboarding_page_one.dart';
-import 'package:evofox_assignment_01/widgets/custom_app_bar.dart';
-import 'package:evofox_assignment_01/widgets/elevated_app_button.dart';
-import 'package:evofox_assignment_01/widgets/onborading_page_indicator.dart';
-import 'package:evofox_assignment_01/widgets/text_app_button.dart';
+// ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:evofox_assignment_01/widgets/onboarding_button_block.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import 'package:evofox_assignment_01/core/theme/app_colors.dart';
+import 'package:evofox_assignment_01/pages/auth/login_page.dart';
+import 'package:evofox_assignment_01/pages/onboarding/onboarding_page_one.dart';
+import 'package:evofox_assignment_01/widgets/custom_app_bar.dart';
+import 'package:evofox_assignment_01/widgets/text_app_button.dart';
 
 class WelcomePage extends StatefulWidget {
   static const name = "/welcome-page";
@@ -71,37 +71,10 @@ class _WelcomePageState extends State<WelcomePage> {
                 ],
               ),
 
-              Column(
-                children: [
-                  OnboradingPageIndicator(activeIndex: 0),
-
-                  SizedBox(height: 24),
-
-                  ElevatedAppButton(
-                    title: "Continue",
-                    onPressed: () {
-                      Navigator.pushNamed(context, OnboardingPageOne.name);
-                    },
-                    icon: Icons.arrow_forward,
-                  ),
-
-                  TextAppButton(
-                    title: '',
-                    onPressed: () {
-                      Navigator.pushNamed(context, RegistrationPage.name);
-                    },
-                    textSpans: [
-                      const TextSpan(text: "Don't have an account? "),
-                      TextSpan(
-                        text: 'Sign Up',
-                        style: TextStyle(
-                          color: AppColors.foregroundRed,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
+              OnBoardingButtonBlock(
+                activeIndex: 0,
+                elevatedButtonText: 'Continue',
+                nextPage: OnboardingPageOne.name,
               ),
             ],
           ),
