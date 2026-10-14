@@ -14,26 +14,29 @@ class OnboardingPageThree extends StatelessWidget {
     return Scaffold(
       appBar: CustomAppBar(),
 
-      body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(28),
-          child: Column(
-            mainAxisAlignment: .spaceBetween,
-            children: [
-              Image.asset('assets/Images/Onboarding3.png'),
+      body: SafeArea(
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsetsGeometry.fromLTRB(28, 28, 28, 28),
+            child: Column(
+              mainAxisAlignment: .spaceBetween,
+              children: [
+                Image.asset('assets/Images/Onboarding3.png'),
 
-              OnBoardingMiddleInfoBlock(
-                subtitleText: 'DISCOVER DEALS',
-                titleText: 'Play more\nPay less.',
-                despText: 'Follow the games you want, get notified when they go on sale, and build a library that fits your budget.',
-              ),
+                OnBoardingMiddleInfoBlock(
+                  subtitleText: 'DISCOVER DEALS',
+                  titleText: 'Play more\nPay less.',
+                  despText: 'Follow the games you want, get notified when they go on sale, and build a library that fits your budget.',
+                ),
 
-              OnBoardingButtonBlock(
-                activeIndex: 3,
-                elevatedButtonText: 'Open EVOFOX',
-                nextPage: LoginPage.name,
-              ),
-            ],
+                OnBoardingButtonBlock(
+                  activeIndex: 3,
+                  elevatedButtonText: 'Open EVOFOX',
+                  nextPage: LoginPage.name,
+                  replaceRoute: true,
+                ),
+              ],
+            ),
           ),
         ),
       ),

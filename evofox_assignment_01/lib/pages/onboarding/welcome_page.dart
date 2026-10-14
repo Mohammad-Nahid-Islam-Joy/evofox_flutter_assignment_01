@@ -40,43 +40,48 @@ class _WelcomePageState extends State<WelcomePage> {
         ),
       ),
 
-      body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(28),
-          child: Column(
-            mainAxisAlignment: .spaceBetween,
-            children: [
-              SizedBox(),
+      body: SafeArea(
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsetsGeometry.fromLTRB(28, 0, 28, 28),
+            child: Column(
+              mainAxisAlignment: .spaceBetween,
+              children: [
+                SizedBox(),
 
-              Column(
-                children: [
-                  Image.asset(
-                    'assets/Images/Evo Fox logo.png',
-                    width: 88,
-                    height: 88,
-                  ),
-
-                  SizedBox(height: 26),
-
-                  Image.asset('assets/Images/EVOFOX wordmark.png', width: 190),
-
-                  SizedBox(height: 12),
-
-                  Text(
-                    "Your next great play starts here.",
-                    style: GoogleFonts.orbit(
-                      textStyle: Theme.of(context).textTheme.headlineSmall,
+                Column(
+                  children: [
+                    Image.asset(
+                      'assets/Images/Evo Fox logo.png',
+                      width: 88,
+                      height: 88,
                     ),
-                  ),
-                ],
-              ),
 
-              OnBoardingButtonBlock(
-                activeIndex: 0,
-                elevatedButtonText: 'Continue',
-                nextPage: OnboardingPageOne.name,
-              ),
-            ],
+                    SizedBox(height: 26),
+
+                    Image.asset(
+                      'assets/Images/EVOFOX wordmark.png',
+                      width: 190,
+                    ),
+
+                    SizedBox(height: 12),
+
+                    Text(
+                      "Your next great play starts here.",
+                      style: GoogleFonts.orbit(
+                        textStyle: Theme.of(context).textTheme.headlineSmall,
+                      ),
+                    ),
+                  ],
+                ),
+
+                OnBoardingButtonBlock(
+                  activeIndex: 0,
+                  elevatedButtonText: 'Continue',
+                  nextPage: OnboardingPageOne.name,
+                ),
+              ],
+            ),
           ),
         ),
       ),

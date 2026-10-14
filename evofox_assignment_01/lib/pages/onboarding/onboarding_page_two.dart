@@ -33,26 +33,29 @@ class OnboardingPageTwo extends StatelessWidget {
         ),
       ),
 
-      body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(28),
-          child: Column(
-            mainAxisAlignment: .spaceBetween,
-            children: [
-              Image.asset('assets/Images/Onboarding2.png'),
+      body: SafeArea(
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsetsGeometry.fromLTRB(28, 28, 28, 28),
+            child: Column(
+              mainAxisAlignment: .spaceBetween,
+              children: [
+                Image.asset('assets/Images/Onboarding2.png'),
 
-              OnBoardingMiddleInfoBlock(
-                subtitleText: 'BUILD YOUR LIBRARY',
-                titleText: 'Your games.\nOne place.',
-                despText: 'Keep your collection organized,\ndownload titles ahead of time, and\njump back in from anywhere.',
-              ),
+                OnBoardingMiddleInfoBlock(
+                  subtitleText: 'BUILD YOUR LIBRARY',
+                  titleText: 'Your games.\nOne place.',
+                  despText: 'Keep your collection organized,\ndownload titles ahead of time, and\njump back in from anywhere.',
+                ),
 
-              OnBoardingButtonBlock(
-                activeIndex: 2,
-                elevatedButtonText: 'Continue',
-                nextPage: OnboardingPageThree.name,
-              ),
-            ],
+                OnBoardingButtonBlock(
+                  activeIndex: 2,
+                  elevatedButtonText: 'Continue',
+                  nextPage: OnboardingPageThree.name,
+                  replaceRoute: true,
+                ),
+              ],
+            ),
           ),
         ),
       ),

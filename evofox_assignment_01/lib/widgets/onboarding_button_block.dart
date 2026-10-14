@@ -9,12 +9,14 @@ class OnBoardingButtonBlock extends StatelessWidget {
   final int activeIndex;
   final String elevatedButtonText;
   final String nextPage;
+  final bool replaceRoute;
 
   const OnBoardingButtonBlock({
     super.key,
     required this.activeIndex,
     required this.elevatedButtonText,
     required this.nextPage,
+    this.replaceRoute = false,
   });
 
   @override
@@ -28,7 +30,9 @@ class OnBoardingButtonBlock extends StatelessWidget {
         ElevatedAppButton(
           title: elevatedButtonText,
           onPressed: () {
-            Navigator.pushNamed(context, nextPage);
+            replaceRoute
+                ? Navigator.pushReplacementNamed(context, nextPage)
+                : Navigator.pushNamed(context, nextPage);
           },
           icon: Icons.arrow_forward,
         ),
