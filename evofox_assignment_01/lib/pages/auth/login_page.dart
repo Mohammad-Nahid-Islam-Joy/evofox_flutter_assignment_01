@@ -81,7 +81,6 @@ class _LoginPageState extends State<LoginPage> {
                         },
                       ),
 
-                      //SizedBox(height: 18),
                       Row(
                         children: [
                           Checkbox(
@@ -163,9 +162,7 @@ class _LoginPageState extends State<LoginPage> {
 
                         child: Text("Conitune with Steam"),
 
-                        onPressed: () {
-                          _formKey.currentState!.validate();
-                        },
+                        onPressed: () {},
                       ),
 
                       TextAppButton(
