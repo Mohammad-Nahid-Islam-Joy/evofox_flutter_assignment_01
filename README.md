@@ -20,8 +20,10 @@ The project emphasizes Flutter fundamentals, reusable widgets, theme customizati
 - [Implementation Highlights](#-implementation-highlights)
 - [Future Improvements](#-future-improvements)
 - [Learning Outcomes](#-learning-outcomes)
+- [Download APK](#-download-apk)
 - [Author](#-author)
 - [License](#-license)
+
 
 ---
 
