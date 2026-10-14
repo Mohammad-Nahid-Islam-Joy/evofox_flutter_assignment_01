@@ -150,7 +150,7 @@ EVOFOX uses a dark gaming aesthetic inspired by contemporary gaming platforms.
 
 The design is an original gaming-store concept rather than a direct reproduction of an existing storefront.
 
-Here's the Figma Design Frame: [Project Overview](https://www.figma.com/design/yd1YWXhx3Fq40iVk5uo03x/EVOFOX--Flutter-Assignment-01-?node-id=0-1&t=lqzjZj5yZ8uW18Su-1)
+Here's the Figma Design Frame: [Project Design](https://www.figma.com/design/yd1YWXhx3Fq40iVk5uo03x/EVOFOX--Flutter-Assignment-01-?node-id=0-1&t=lqzjZj5yZ8uW18Su-1)
 
 ---
 
